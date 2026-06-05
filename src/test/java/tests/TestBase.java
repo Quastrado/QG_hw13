@@ -30,7 +30,7 @@ public class TestBase {
         Configuration.headless = Boolean.parseBoolean(System.getProperty("headless"));
         Configuration.baseUrl = "https://qa-guru.github.io/one-page-form";
         Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.browser = "chrome";
+        Configuration.browser = System.getProperty("browser");
         Configuration.remote = Secrets.remoteBrowserUrl;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
