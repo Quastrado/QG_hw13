@@ -28,7 +28,7 @@ public class TestBase {
     static void setupSelenideEnv(){
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.headless = Boolean.parseBoolean(System.getProperty("headless"));
-        Configuration.baseUrl = "https://qa-guru.github.io/one-page-form";
+        Configuration.baseUrl = System.getProperty("baseUrl");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browser = System.getProperty("browser");
         Configuration.remote = Secrets.remoteBrowserUrl;
